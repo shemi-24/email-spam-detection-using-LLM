@@ -6,6 +6,8 @@ from langchain.chains import LLMChain     # LLMChain is a chain that combines a 
 
 app = Flask(__name__)
 
+# THIS PROGRAM IS FOR EMAIL CLASSIFICATION
+
 # Load Groq API key from environment variables
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
