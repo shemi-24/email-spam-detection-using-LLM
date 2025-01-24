@@ -26,7 +26,7 @@ prompt = PromptTemplate(
     template=(
         "You are an email categorization assistant. Categorize the email into one of the following categories:\n"
         "- Primary: Important personal or work emails.\n"
-        "- Spam: Unwanted or unsolicited messages.\n"
+        "- Spam: Unwanted or unsolicited messages. there is any fake offers will come then strictly categorize to spam\n"
         "- Social: Emails related to social networks, media, or communities.\n"
         "- Promotions: Marketing or promotional emails.\n"
         "- Scheduled: Emails related to events or calendar schedules.\n\n"
