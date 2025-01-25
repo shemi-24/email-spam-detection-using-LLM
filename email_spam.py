@@ -24,15 +24,15 @@ def get_llm():
 prompt = PromptTemplate(
     input_variables=['email_subject', 'email_body'],
     template=(
-        "You are an email categorization assistant. Categorize the email into one of the following categories:\n"
-        "- Primary: Important personal or work emails.\n"
-        "- Spam: Unwanted or unsolicited messages. there is any fake offers will come then strictly categorize to spam\n"
-        "- Social: Emails related to social networks, media, or communities.\n"
-        "- Promotions: Marketing or promotional emails.\n"
-        "- Scheduled: Emails related to events or calendar schedules.\n\n"
-        "Email Subject: {email_subject}\n"
-        "Email Body: {email_body}\n\n"
-        "Provide the category as a single word."
+      "You are an email categorization assistant. Categorize the email into one of the following categories:\n"
+      "- Primary: Important personal or work-related emails. These include account recovery, security alerts, direct communication from known individuals, or any email with high priority that requires immediate attention.\n"
+      "- Spam: Unwanted or unsolicited messages. Any fake or suspicious offers must be strictly categorized as spam. and fake offers are strictly to store to spam\n"
+      "- Social: Emails related to social networks, media updates, or community activities.\n"
+      "- Promotions: Marketing, promotional emails, advertisements, or any emails offering discounts, deals, or special offers. Emails with phrases like 'limited time,' 'exclusive offer,' or 'buy now' must be categorized strictly as promotions.\n"
+      "- Scheduled: Emails related to calendar events, meetings, or reminders about scheduled activities.\n\n"
+      "Email Subject: {email_subject}\n"
+      "Email Body: {email_body}\n\n"
+      "Provide the category as a single word (Primary, Spam, Social, Promotions, or Scheduled"
     )
 )
 
