@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Load Groq API key from environment variables
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
+print(GROQ_API_KEY);
 
 # Initialize the Groq model via LangChain
 def get_llm():
@@ -66,7 +66,9 @@ def categorize():
 @app.route('/health', methods=['GET'])
 def health():
     return "OK", 200
+
+
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
