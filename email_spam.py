@@ -3,13 +3,19 @@ from flask import Flask, request, jsonify
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain     # LLMChain is a chain that combines a language model (in your case, the ChatGroq model) with a prompt template to produce a response. It takes in input data (such as email_subject and email_body),
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # THIS PROGRAM IS FOR EMAIL CLASSIFICATION
 
+
+# Load environment variables from the .env file
+load_dotenv()
+
 # Load Groq API key from environment variables
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+print("GROQ");
 print(GROQ_API_KEY);
 
 # Initialize the Groq model via LangChain
