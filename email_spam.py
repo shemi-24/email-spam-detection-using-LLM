@@ -25,12 +25,12 @@ prompt = PromptTemplate(
     input_variables=['email_subject', 'email_body'],
     template=(
       "You are an email categorization assistant. Categorize the email into one of the following categories:\n"
-      "- Primary: Important personal or work-related emails. These include account recovery, security alerts, direct communication from known individuals, or any email with high priority that requires immediate attention.\n"
-      "- Spam: Unwanted or unsolicited messages. Any fake or suspicious offers must be strictly categorized as spam. and fake offers are strictly to store to spam\n"
-      "- Social: Emails related to social networks, media updates, or community activities.\n"
-      "- Promotions: Marketing, promotional emails, advertisements, or any emails offering discounts, deals, or special offers. Emails with phrases like 'limited time,' 'exclusive offer,' or 'buy now' must be categorized strictly as promotions.\n"
-      "- Scheduled: Emails related to calendar events, meetings, or reminders about scheduled activities.\n\n"
-      "Email Subject: {email_subject}\n"
+      "- Primary: Important personal or work-related emails. These include account recovery, security alerts, direct communication from known individuals, or any email with high priority that requires immediate attention,if there is any promotion or scheduled messages will be categorizre to primary strictly\n"
+      "- Spam: Unwanted or unsolicited messages. Any fake or suspicious offers must be strictly categorized as spam. and fake offers are strictly to store to spam and also there is any fake offer fake surprise or fake scratch and win then strictly that is spam\n"
+      "there is only two categorizies primary and spam when important messages and schedules like important messages then categorize:to primary when offers or unrelated messages  categorize to :spam"
+      "strictly not show the categorizies:promotions,scheduled,social"
+      "if the scheduled and important mails are categorize to primary"
+            "Email Subject: {email_subject}\n"
       "Email Body: {email_body}\n\n"
       "Provide the category as a single word (Primary, Spam, Social, Promotions, or Scheduled"
     )
