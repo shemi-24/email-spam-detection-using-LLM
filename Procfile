@@ -1,1 +1,1 @@
-web: gunicorn --bind :$PORT email_spam:app
+web: gunicorn --bind :$PORT email_model:app
