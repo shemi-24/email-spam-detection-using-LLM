@@ -4,6 +4,6 @@
       { "src": "email_spam.py", "use": "@vercel/python" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/email_model.py" }
+      { "src": "/(.*)", "dest": "/email_spam.py" }
     ]
   }
